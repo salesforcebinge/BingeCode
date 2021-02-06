@@ -7,7 +7,7 @@ public inherited sharing class SearchAccountsLWCController {
             List<Account> accountList = [SELECT Id, Name, Phone, Industry, BillingPostalCode, BillingCity, BillingState, BillingStreet, BillingCountry FROM Account WHERE BillingPostalCode LIKE :zipCode LIMIT :soqlLimit];
 
             if (accountList.isEmpty()) {
-                throw new AuraHandledException('No Accounts in this area '+zipCode);
+                throw new AuraHandledException('No Accounts in this area : '+zipCode);
             }
 
             return accountList;

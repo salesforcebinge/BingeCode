@@ -15,7 +15,7 @@ export default class SearchAccountsMapLWC extends LightningElement {
     handleAccountSearch() {
         this.mapMarkers= [];
         if(!this.zipCodeSearch) {
-            this.errorMsg = 'Please enter zipcode to search accounts.';
+            this.errorMsg = 'Please enter zipcode to search account(s).';
             this.searchData = undefined;
             return;
         }
